@@ -2,6 +2,8 @@
 
 export let value;
 export let isOn = false;
+export let color;
+
 $: status = isOn ? "on" : "off";
 
 </script>
@@ -17,10 +19,15 @@ $: status = isOn ? "on" : "off";
 		user-select:none;
 		margin-right:10px;
 		margin-bottom:10px;
+		background:var(--color);
+	}
+
+	.button.active {
+		background:var(--color);
 	}
 </style>
 
 
-<div class="button" on:click={() => {isOn = !isOn}}>
+<div class="button" style="--color:{color}" on:click={() => {isOn = !isOn}}>
 	{value} {status}
 </div>

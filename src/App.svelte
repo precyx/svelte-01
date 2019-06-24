@@ -1,4 +1,5 @@
 <script>
+	import Test from "./Test.svelte";
 	import Button from "./Button.svelte";
 	import Buttons from "./Buttons.svelte";
 
@@ -18,3 +19,5 @@
 <Button value="test" />
 
 <Buttons></Buttons>
+
+<Test></Test>
